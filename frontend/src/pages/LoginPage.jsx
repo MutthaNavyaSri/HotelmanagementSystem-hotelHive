@@ -73,22 +73,22 @@ export const LoginPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-emerald-900 to-slate-900 flex items-center justify-center p-4">
-      <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md border-t-4 border-emerald-700">
+    <div className="min-h-screen bg-gradient-to-br from-[#14213D] via-[#1F4068] to-[#14213D] flex items-center justify-center p-4">
+      <div className="bg-white rounded-xl shadow-2xl p-8 w-full max-w-md border-t-4 border-primary">
         <h1 className="text-3xl font-bold text-center text-slate-900 mb-2">Welcome Back</h1>
         <p className="text-center text-slate-600 mb-8">Sign in to your account</p>
 
         {/* Success Message */}
         {successMessage && (
-          <div className="mb-6 p-4 bg-emerald-50 border border-emerald-300 rounded-lg">
-            <p className="text-emerald-700 font-semibold text-center">{successMessage}</p>
+          <div className="mb-6 p-4 bg-blue-50 border border-blue-300 rounded-lg">
+            <p className="text-primary font-semibold text-center">{successMessage}</p>
           </div>
         )}
 
         {/* Error Message */}
         {validationError && (
-          <div className="mb-6 p-4 bg-rose-50 border border-rose-300 rounded-lg">
-            <p className="text-rose-700 font-semibold text-center">❌ {validationError}</p>
+          <div className="mb-6 p-4 bg-amber-50 border border-amber-300 rounded-lg">
+            <p className="text-highlight font-semibold text-center">❌ {validationError}</p>
           </div>
         )}
 
@@ -120,7 +120,7 @@ export const LoginPage = () => {
           <button
             type="submit"
             disabled={isLoading || !!successMessage}
-            className="w-full bg-emerald-700 text-white py-2 rounded-lg font-semibold hover:bg-emerald-800 active:bg-emerald-900 transition disabled:opacity-50 disabled:cursor-not-allowed shadow"
+            className="w-full bg-primary text-white py-2 rounded-lg font-semibold hover:bg-secondary active:bg-[#0D1620] transition disabled:opacity-50 disabled:cursor-not-allowed shadow"
           >
             {isLoading ? '⟳ Signing in...' : (successMessage ? '✅ Done!' : 'Sign In')}
           </button>
@@ -145,7 +145,7 @@ export const LoginPage = () => {
 
         <p className="text-center text-slate-600 mt-8">
           Don't have an account?{' '}
-          <a href="/signup" className="text-emerald-700 hover:text-emerald-800 font-semibold">
+          <a href="/signup" className="text-primary hover:text-secondary font-semibold">
             Sign up
           </a>
         </p>

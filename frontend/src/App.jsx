@@ -177,7 +177,7 @@ const HomePage = () => {
                   <input
                     type="text"
                     placeholder="Add a comment..."
-                    className="flex-1 text-sm px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-emerald-400"
+                    className="flex-1 text-sm px-3 py-1 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-accent"
                   />
                 </div>
               </div>
@@ -186,7 +186,7 @@ const HomePage = () => {
 
           {/* View More Button */}
           <div className="text-center mt-12">
-            <button className="px-8 py-3 bg-gradient-to-r from-emerald-600 to-rose-600 text-white rounded-full font-bold hover:from-emerald-700 hover:to-rose-700 transition shadow-lg">
+            <button className="px-8 py-3 bg-gradient-to-r from-secondary to-rose-600 text-white rounded-full font-bold hover:from-emerald-700 hover:to-rose-700 transition shadow-lg">
               View More Stories
             </button>
           </div>
@@ -217,19 +217,19 @@ const Navbar = () => {
           {/* Home Link */}
           <a
             href="/"
-            className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-emerald-100 duration-300"
+            className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
           >
             Home
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
           </a>
 
           {/* Rooms Link */}
           <a
             href="/rooms"
-            className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-emerald-100 duration-300"
+            className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
           >
             Rooms
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
           </a>
 
           {/* Auth Links */}
@@ -257,16 +257,16 @@ const Navbar = () => {
               {/* Login Link */}
               <a
                 href="/login"
-                className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-emerald-100 duration-300"
+                className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
               >
                 Login
-                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
               </a>
 
               {/* Signup Button */}
               <a
                 href="/signup"
-                className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-primary to-teal-500 hover:from-secondary hover:to-teal-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 Signup
               </a>
@@ -312,3 +312,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
