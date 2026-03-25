@@ -113,20 +113,20 @@ export const ChatBot = () => {
     <div className="fixed bottom-6 right-6 z-40">
       {/* Chat Widget */}
       {isOpen && (
-        <div className="bg-white rounded-2xl shadow-2xl w-96 max-h-96 flex flex-col mb-4 border-2 border-emerald-200 animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="bg-background rounded-2xl shadow-2xl w-96 max-h-96 flex flex-col mb-4 border-2 border-accent animate-in fade-in slide-in-from-bottom-4 duration-300">
           {/* Header */}
-          <div className="bg-gradient-to-r from-emerald-600 to-teal-600 text-white p-4 rounded-t-2xl">
+          <div className="bg-gradient-to-r from-primary to-secondary text-white p-4 rounded-t-2xl">
             <div className="flex justify-between items-center">
               <div className="flex items-center gap-2">
                 <span className="text-2xl">🤖</span>
                 <div>
                   <h3 className="font-bold text-lg">HotelHive AI Assistant</h3>
-                  <p className="text-xs text-emerald-100">Smart chat powered by AI</p>
+                  <p className="text-xs text-blue-100">Smart chat powered by AI</p>
                 </div>
               </div>
               <button
                 onClick={() => setIsOpen(false)}
-                className="text-white hover:bg-emerald-700 p-1 rounded transition"
+                className="text-white hover:bg-secondary p-1 rounded transition"
               >
                 ✕
               </button>
@@ -141,8 +141,8 @@ export const ChatBot = () => {
                   <div
                     className={`px-4 py-2 rounded-lg text-sm leading-relaxed ${
                       msg.type === 'user'
-                        ? 'bg-emerald-600 text-white rounded-br-none'
-                        : 'bg-white border border-emerald-200 text-gray-800 rounded-bl-none'
+                        ? 'bg-primary text-white rounded-br-none'
+                        : 'bg-white border border-accent text-gray-800 rounded-bl-none'
                     }`}
                   >
                     {msg.text}
@@ -152,8 +152,8 @@ export const ChatBot = () => {
                   {msg.rooms && msg.rooms.length > 0 && (
                     <div className="space-y-2">
                       {msg.rooms.map((room, idx) => (
-                        <div key={idx} className="bg-emerald-50 border border-emerald-200 rounded p-2 text-xs text-gray-700">
-                          <p className="font-semibold text-emerald-700">{room.room_type}</p>
+                        <div key={idx} className="bg-blue-50 border border-accent rounded p-2 text-xs text-gray-700">
+                          <p className="font-semibold text-primary">{room.room_type}</p>
                           <p>Price: ₹{room.price}/night</p>
                           <p>Capacity: {room.capacity} guests</p>
                         </div>
@@ -168,7 +168,7 @@ export const ChatBot = () => {
                         <button
                           key={idx}
                           onClick={() => handleQuickQuestion(suggestion)}
-                          className="block w-full text-left px-3 py-1 text-xs bg-emerald-100 hover:bg-emerald-200 border border-emerald-300 rounded transition text-emerald-700 font-semibold"
+                          className="block w-full text-left px-3 py-1 text-xs bg-blue-100 hover:bg-blue-200 border border-accent rounded transition text-primary font-semibold"
                         >
                           💡 {suggestion}
                         </button>
@@ -181,7 +181,7 @@ export const ChatBot = () => {
 
             {isLoading && (
               <div className="flex justify-start">
-                <div className="px-4 py-2 bg-white border border-emerald-200 rounded-lg text-gray-600 text-sm">
+                <div className="px-4 py-2 bg-white border border-accent rounded-lg text-gray-600 text-sm">
                   <span className="inline-block animate-pulse">Thinking...</span>
                 </div>
               </div>
@@ -189,7 +189,7 @@ export const ChatBot = () => {
           </div>
 
           {/* Input Area */}
-          <div className="border-t border-emerald-200 p-4 bg-white rounded-b-2xl">
+          <div className="border-t border-accent p-4 bg-white rounded-b-2xl">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -198,12 +198,12 @@ export const ChatBot = () => {
                 onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()}
                 placeholder="Ask me anything..."
                 disabled={isLoading}
-                className="flex-1 px-3 py-2 border border-emerald-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 text-sm disabled:bg-gray-100"
+                className="flex-1 px-3 py-2 border border-accent rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-sm disabled:bg-gray-100"
               />
               <button
                 onClick={handleSendMessage}
                 disabled={isLoading}
-                className="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition font-semibold disabled:bg-gray-400"
+                className="px-4 py-2 bg-primary hover:bg-secondary text-white rounded-lg transition font-semibold disabled:bg-gray-400"
               >
                 {isLoading ? '...' : 'Send'}
               </button>
@@ -217,8 +217,8 @@ export const ChatBot = () => {
         onClick={() => setIsOpen(!isOpen)}
         className={`w-16 h-16 rounded-full shadow-lg font-bold text-2xl transition-all duration-300 flex items-center justify-center transform ${
           isOpen
-            ? 'bg-rose-500 hover:bg-rose-600 scale-90'
-            : 'bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 hover:scale-110'
+            ? 'bg-highlight hover:opacity-90 scale-90'
+            : 'bg-gradient-to-r from-primary to-secondary hover:shadow-xl hover:scale-110'
         }`}
         title={isOpen ? 'Close chat' : 'Open chat'}
       >

@@ -16,12 +16,12 @@ import './App.css';
 
 const HomePage = () => {
   const storyData = [
-    { id: 1, author: 'Luxury Rooms', emoji: '🛏️', color: 'from-emerald-400 to-emerald-600' },
-    { id: 2, author: 'Ocean View', emoji: '🌊', color: 'from-teal-400 to-cyan-600' },
-    { id: 3, author: 'Sunset Vibes', emoji: '🌅', color: 'from-rose-400 to-pink-600' },
-    { id: 4, author: 'City Life', emoji: '🏙️', color: 'from-purple-400 to-indigo-600' },
-    { id: 5, author: 'Garden Spa', emoji: '🌸', color: 'from-pink-400 to-rose-600' },
-    { id: 6, author: 'Fine Dining', emoji: '🍽️', color: 'from-amber-400 to-orange-600' },
+    { id: 1, author: 'Luxury Rooms', emoji: '🛏️', color: 'from-[#14213D] to-[#1F4068]' },
+    { id: 2, author: 'Ocean View', emoji: '🌊', color: 'from-[#00B4D8] to-[#0099BB]' },
+    { id: 3, author: 'Sunset Vibes', emoji: '🌅', color: 'from-[#FFD60A] to-[#FFC300]' },
+    { id: 4, author: 'City Life', emoji: '🏙️', color: 'from-[#1F4068] to-[#14213D]' },
+    { id: 5, author: 'Garden Spa', emoji: '🌸', color: 'from-[#00B4D8] to-[#0099BB]' },
+    { id: 6, author: 'Fine Dining', emoji: '🍽️', color: 'from-[#FFD60A] to-[#FFC300]' },
   ];
 
   const feedData = [
@@ -35,7 +35,7 @@ const HomePage = () => {
       likes: 1240,
       comments: 89,
       time: '2 days ago',
-      color: 'from-emerald-100 to-teal-100',
+      color: 'from-blue-50 to-blue-100',
     },
     {
       id: 2,
@@ -47,7 +47,7 @@ const HomePage = () => {
       likes: 2156,
       comments: 145,
       time: '4 days ago',
-      color: 'from-rose-100 to-pink-100',
+      color: 'from-amber-50 to-amber-100',
     },
     {
       id: 3,
@@ -69,7 +69,7 @@ const HomePage = () => {
       <div className="max-w-6xl mx-auto px-4 py-16">
         <h1 className="text-5xl font-bold text-slate-900 mb-4">Find Your Perfect Hotel</h1>
         <p className="text-xl text-slate-700 mb-8">Discover beautiful rooms and amazing experiences</p>
-        <a href="/rooms" className="inline-block px-8 py-3 bg-gradient-to-r from-emerald-700 to-teal-700 text-white rounded-lg hover:from-emerald-800 hover:to-teal-800 font-semibold shadow-lg transition transform hover:scale-105">
+        <a href="/rooms" className="inline-block px-8 py-3 bg-gradient-to-r from-[#14213D] to-[#1F4068] text-white rounded-lg hover:from-[#0D1620] hover:to-[#162D45] font-semibold shadow-lg transition transform hover:scale-105">
           Explore Rooms
         </a>
       </div>
@@ -202,12 +202,12 @@ const Navbar = () => {
   const { user, logout, loading } = useContext(AuthContext);
 
   return (
-    <nav className="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-100 text-slate-900 py-4 px-4 shadow-lg border-b-4 border-emerald-400 backdrop-blur-sm sticky top-0 z-40">
+    <nav className="bg-gradient-to-r from-blue-50 via-blue-50 to-[#F1F5F9] text-slate-900 py-4 px-4 shadow-lg border-b-4 border-accent backdrop-blur-sm sticky top-0 z-40">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center gap-2">
           <span className="text-3xl drop-shadow-lg">🏨</span>
-          <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 via-teal-600 to-emerald-700 bg-clip-text text-transparent drop-shadow-sm hover:scale-110 transition-transform">
+          <h1 className="text-2xl font-bold bg-gradient-to-r from-[#14213D] via-[#00B4D8] to-[#14213D] bg-clip-text text-transparent drop-shadow-sm hover:scale-110 transition-transform">
             HotelHive
           </h1>
         </div>
@@ -238,7 +238,7 @@ const Navbar = () => {
               {/* Profile Link */}
               <a
                 href="/profile"
-                className="bg-gradient-to-r from-emerald-500 to-teal-500 hover:from-emerald-600 hover:to-teal-600 text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-[#14213D] to-[#1F4068] hover:from-[#0D1620] hover:to-[#162D45] text-white px-4 py-2 rounded-lg font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 <span className="text-lg">👤</span>
                 <span className="hidden sm:inline">{user.email || user.username || 'Profile'}</span>
