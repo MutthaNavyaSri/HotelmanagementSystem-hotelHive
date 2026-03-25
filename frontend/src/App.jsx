@@ -220,7 +220,7 @@ const Navbar = () => {
             className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
           >
             Home
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#00B4D8] to-[#14213D] rounded-full group-hover:w-full transition-all duration-300"></span>
           </a>
 
           {/* Rooms Link */}
@@ -229,7 +229,7 @@ const Navbar = () => {
             className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
           >
             Rooms
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+            <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#00B4D8] to-[#14213D] rounded-full group-hover:w-full transition-all duration-300"></span>
           </a>
 
           {/* Auth Links */}
@@ -247,7 +247,7 @@ const Navbar = () => {
               {/* Logout Button */}
               <button
                 onClick={logout}
-                className="bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white px-4 py-2 rounded-lg font-semibold transition shadow-lg hover:shadow-xl transform hover:scale-105 duration-300"
+                className="bg-gradient-to-r from-highlight to-amber-400 hover:from-yellow-500 hover:to-yellow-500 text-slate-900 px-4 py-2 rounded-lg font-semibold transition shadow-lg hover:shadow-xl transform hover:scale-105 duration-300"
               >
                 Logout
               </button>
@@ -260,13 +260,13 @@ const Navbar = () => {
                 className="text-slate-700 hover:text-emerald-700 px-4 py-2 rounded-lg transition font-semibold relative group hover:bg-blue-100 duration-300"
               >
                 Login
-                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-secondary to-teal-600 rounded-full group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#00B4D8] to-[#14213D] rounded-full group-hover:w-full transition-all duration-300"></span>
               </a>
 
               {/* Signup Button */}
               <a
                 href="/signup"
-                className="bg-gradient-to-r from-primary to-teal-500 hover:from-secondary hover:to-teal-600 text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+                className="bg-gradient-to-r from-accent to-[#0099BB] hover:from-[#0099BB] hover:to-[#007799] text-white px-4 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
               >
                 Signup
               </a>
