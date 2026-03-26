@@ -167,7 +167,7 @@ const HomePage = () => {
                     View all {post.comments} comments
                   </p>
 
-                  {/* Time */}}
+                  {/* Time */}
                   <p className="text-xs text-slate-400">{post.time}</p>
                 </div>
 
