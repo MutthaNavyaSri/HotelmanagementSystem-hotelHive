@@ -30,7 +30,7 @@ class ImageSerializer(serializers.ModelSerializer):
 class RoomListSerializer(serializers.ModelSerializer):
     """Serializer for Room Listing (minimal info)"""
     primary_image = serializers.SerializerMethodField()
-    average_rating = serializers.FloatField()
+    average_rating = serializers.SerializerMethodField()
     
     class Meta:
         model = Room
@@ -45,12 +45,16 @@ class RoomListSerializer(serializers.ModelSerializer):
                 return request.build_absolute_uri(image.image.url)
             return image.image.url
         return None
+    
+    def get_average_rating(self, obj):
+        """Get average rating from property"""
+        return obj.average_rating
 
 
 class RoomDetailSerializer(serializers.ModelSerializer):
     """Serializer for Room Details (full info)"""
     images = ImageSerializer(many=True, read_only=True)
-    average_rating = serializers.FloatField()
+    average_rating = serializers.SerializerMethodField()
     created_by_name = serializers.SerializerMethodField()
     
     class Meta:
@@ -60,6 +64,10 @@ class RoomDetailSerializer(serializers.ModelSerializer):
             'location', 'amenities', 'images', 'average_rating', 'rating_count', 'available_from',
             'available_to', 'created_by_name', 'created_at', 'updated_at'
         ]
+    
+    def get_average_rating(self, obj):
+        """Get average rating from property"""
+        return obj.average_rating
     
     def get_created_by_name(self, obj):
         if obj.created_by:
