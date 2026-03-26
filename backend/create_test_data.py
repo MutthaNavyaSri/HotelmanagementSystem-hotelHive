@@ -8,10 +8,10 @@ from api.models import Room
 
 # Create test rooms
 rooms_data = [
-    {"title": "Deluxe Suite", "description": "Luxury room with ocean view", "room_type": "deluxe", "price_per_night": 150, "max_guests": 2},
-    {"title": "Standard Double Room", "description": "Comfortable room with WiFi", "room_type": "double", "price_per_night": 80, "max_guests": 2},
-    {"title": "Family Suite", "description": "Spacious room for families", "room_type": "suite", "price_per_night": 200, "max_guests": 4},
-    {"title": "Budget Single Room", "description": "Economy room", "room_type": "single", "price_per_night": 50, "max_guests": 1},
+    {"title": "Deluxe Suite", "description": "Luxury room with ocean view", "room_type": "deluxe", "price_per_night": 150, "max_guests": 2, "location": "Bangalore Downtown"},
+    {"title": "Standard Double Room", "description": "Comfortable room with WiFi", "room_type": "double", "price_per_night": 80, "max_guests": 2, "location": "Bangalore East"},
+    {"title": "Family Suite", "description": "Spacious room for families", "room_type": "suite", "price_per_night": 200, "max_guests": 4, "location": "Bangalore Whitefield"},
+    {"title": "Budget Single Room", "description": "Economy room", "room_type": "single", "price_per_night": 50, "max_guests": 1, "location": "Bangalore Airport"},
 ]
 
 # Clear existing rooms first

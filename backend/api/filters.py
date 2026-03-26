@@ -16,7 +16,8 @@ class RoomFilter(filters.FilterSet):
     price_min = filters.NumberFilter(field_name='price_per_night', lookup_expr='gte')
     price_max = filters.NumberFilter(field_name='price_per_night', lookup_expr='lte')
     room_type = filters.ChoiceFilter(choices=Room.ROOM_TYPE_CHOICES)
+    location = filters.CharFilter(field_name='location', lookup_expr='icontains')
     
     class Meta:
         model = Room
-        fields = ['room_type', 'max_guests']
+        fields = ['room_type', 'max_guests', 'location']

@@ -208,17 +208,17 @@ export const RoomDetailsPage = () => {
   const totalPrice = days * parseFloat(room.price_per_night);
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="max-w-6xl mx-auto px-4">
+    <div className="min-h-screen bg-gray-50 py-6 md:py-12">
+      <div className="max-w-6xl mx-auto px-3 md:px-4">
         {/* Back Button */}
         <button
           onClick={() => navigate('/rooms')}
-          className="mb-6 text-emerald-700 hover:text-emerald-800 font-semibold flex items-center transition"
+          className="mb-4 md:mb-6 text-emerald-700 hover:text-emerald-800 font-semibold flex items-center transition text-sm md:text-base"
         >
           ← Back to Rooms
         </button>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8">
           {/* Room Details */}
           <div className="lg:col-span-2">
             {/* Room Images */}
@@ -228,7 +228,7 @@ export const RoomDetailsPage = () => {
                 <>
                   <div
                     onClick={() => openImageModal(0)}
-                    className="bg-slate-200 h-96 rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow"
+                    className="bg-slate-200 h-48 md:h-96 rounded-lg shadow-lg flex items-center justify-center overflow-hidden cursor-pointer hover:shadow-2xl transition-shadow"
                   >
                     <img
                       src={room.images[0].image}
@@ -242,12 +242,12 @@ export const RoomDetailsPage = () => {
                   </div>
                   {/* Additional Images Gallery */}
                   {room.images.length > 1 && (
-                    <div className="grid grid-cols-3 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 md:gap-4">
                       {room.images.slice(1, 4).map((img, idx) => (
                         <div
                           key={img.id}
                           onClick={() => openImageModal(idx + 1)}
-                          className="bg-slate-200 h-32 rounded-lg shadow overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
+                            className="bg-slate-200 h-24 md:h-32 rounded-lg shadow overflow-hidden cursor-pointer hover:shadow-lg transition-shadow"
                         >
                           <img
                             src={img.image}
@@ -264,8 +264,8 @@ export const RoomDetailsPage = () => {
                   )}
                 </>
               ) : (
-                <div className="bg-gradient-to-br from-emerald-400 to-teal-600 h-96 rounded-lg shadow-lg flex items-center justify-center mb-6">
-                  <span className="text-8xl">🛏️</span>
+                <div className="bg-gradient-to-br from-emerald-400 to-teal-600 h-48 md:h-96 rounded-lg shadow-lg flex items-center justify-center mb-6">
+                  <span className="text-6xl md:text-8xl">🛏️</span>
                 </div>
               )}
             </div>

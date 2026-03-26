@@ -23,16 +23,16 @@ class ImageInline(admin.TabularInline):
 
 @admin.register(Room)
 class RoomAdmin(admin.ModelAdmin):
-    list_display = ['title', 'room_type', 'price_per_night', 'max_guests', 'average_rating', 'rating_count', 'created_at']
-    list_filter = ['room_type', 'created_at', 'rating_count']
-    search_fields = ['title', 'description']
+    list_display = ['title', 'room_type', 'location', 'price_per_night', 'max_guests', 'average_rating', 'rating_count', 'created_at']
+    list_filter = ['room_type', 'location', 'created_at', 'rating_count']
+    search_fields = ['title', 'description', 'location']
     readonly_fields = ['total_rating', 'rating_count', 'created_at', 'updated_at', 'average_rating']
     
     inlines = [ImageInline]
     
     fieldsets = (
         ('Basic Information', {
-            'fields': ('title', 'description', 'room_type', 'max_guests')
+            'fields': ('title', 'description', 'room_type', 'location', 'max_guests')
         }),
         ('Pricing & Availability', {
             'fields': ('price_per_night', 'available_from', 'available_to')

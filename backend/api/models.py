@@ -38,6 +38,7 @@ class Room(models.Model):
     room_type = models.CharField(max_length=50, choices=ROOM_TYPE_CHOICES)
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2, validators=[MinValueValidator(0)])
     max_guests = models.IntegerField(default=2, validators=[MinValueValidator(1)])
+    location = models.CharField(max_length=255, null=True, blank=True)  # Location field (e.g., "Downtown", "Beachfront", "Airport Area")
     amenities = models.JSONField(default=dict, blank=True)  # JSON field for amenities like [WiFi, AC, TV]
     
     # Rating and reviews

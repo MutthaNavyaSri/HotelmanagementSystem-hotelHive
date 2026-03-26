@@ -1,18 +1,18 @@
 # HotelHive Color Theme
 
-## New Color Palette (March 2026)
+## Current Color Palette (March 2026 - Updated)
 
-The application has been updated from a luxury emerald/rose/pink theme to a modern midnight blue/electric blue/soft gold palette.
+The application uses an elegant emerald/champagne/gold palette designed for luxury and sophistication.
 
 ### Color Swatches
 
 | Color | Hex | Usage | Tailwind Class |
 |-------|-----|-------|-----------------|
-| **Primary (Midnight Blue)** | `#14213D` | Main buttons, primary actions, navbar, borders | `primary` |
-| **Secondary (Dark Blue)** | `#1F4068` | Hover states, secondary elements | `secondary` |
-| **Accent (Electric Blue)** | `#00B4D8` | Highlights, accents, important text | `accent` |
-| **Highlight (Soft Gold)** | `#FFD60A` | Warnings, gold accents, special elements | `highlight` |
-| **Background (Light Gray)** | `#F1F5F9` | Light backgrounds, card backgrounds | `background` |
+| **Primary (Dark Emerald)** | `#0F3D3E` | Main buttons, primary actions, navbar, borders | `primary` |
+| **Secondary (Champagne Gold)** | `#E2C799` | Accents, gold highlights, special elements | `secondary` |
+| **Accent (Dark Teal)** | `#2C666E` | Highlights, focus states, important accents | `accent` |
+| **Highlight (Champagne Gold)** | `#E2C799` | Warnings, gold accents, special elements | `highlight` |
+| **Background (Light Gray)** | `#F7F7F7` | Light backgrounds, card backgrounds, page background | `background` |
 
 ### Tailwind Configuration
 
@@ -22,32 +22,66 @@ The colors are defined in `frontend/tailwind.config.js`:
 theme: {
   extend: {
     colors: {
-      primary: '#14213D',
-      secondary: '#1F4068',
-      accent: '#00B4D8',
-      highlight: '#FFD60A',
-      background: '#F1F5F9',
+      primary: '#0F3D3E',
+      secondary: '#E2C799',
+      accent: '#2C666E',
+      highlight: '#E2C799',
+      background: '#F7F7F7',
     }
   },
 }
 ```
 
-## Color Replacement Guide
+## Color Usage Guide
 
-### Old → New Color Mappings
+### Primary Color (#0F3D3E - Dark Emerald)
+- Main call-to-action buttons
+- Navbar gradient backgrounds
+- Primary text on light backgrounds
+- Border colors for emphasis
+- Form input focus states
 
-| Old Color | Old Class | New Class | New Hex |
-|-----------|-----------|-----------|---------|
-| Emerald 700 | `emerald-700` | `primary` | `#14213D` |
-| Emerald 600 | `emerald-600` | `secondary` | `#1F4068` |
-| Emerald 500 | `emerald-500` | `primary` | `#14213D` |
-| Teal 600 | `teal-600` | `accent` | `#00B4D8` |
-| Teal 500 | `teal-500` | `accent` | `#00B4D8` |
-| Rose 600 | `rose-600` | `highlight` | `#FFD60A` |
-| Rose 500 | `rose-500` | `highlight` | `#FFD60A` |
-| Pink 700 | `pink-700` | `highlight` | `#FFD60A` |
-| Emerald 50 | `emerald-50` | `blue-50` | - |
-| Rose 50 | `rose-50` | `amber-50` | - |
+### Secondary/Highlight Color (#E2C799 - Champagne Gold)
+- Secondary buttons (SignUp, View Details)
+- Gold accents in gradients
+- Special highlight elements
+- Hover states for luxury feel
+
+### Accent Color (#2C666E - Dark Teal)
+- Form input focus rings
+- Accent borders
+- Secondary action buttons
+- Hover states for interactive elements
+
+### Background Color (#F7F7F7 - Light Gray)
+- Page background
+- Body background
+- Card backgrounds (where white is used for contrast)
+- Prevents white flashing when scrolling
+
+## Color Application Examples
+
+```jsx
+// Primary button
+<button className="bg-[#0F3D3E] hover:bg-[#0A2829]">Action</button>
+
+// Gold secondary button
+<button className="bg-[#E2C799] hover:bg-[#D9BC85] text-[#0F3D3E]">Secondary</button>
+
+// Accent focus state
+<input className="focus:ring-2 focus:ring-[#2C666E]" />
+
+// Gradient header
+<div className="bg-gradient-to-r from-[#0F3D3E] to-[#2C666E]">Header</div>
+```
+
+## Previous Color Palettes (Archive)
+
+### Old Palette (Midnight Blue/Electric Blue - Earlier Version)
+- Primary: `#14213D`
+- Secondary: `#1F4068`
+- Accent: `#00B4D8`
+- Highlight: `#FFD60A`
 
 ## Component Updates Status
 

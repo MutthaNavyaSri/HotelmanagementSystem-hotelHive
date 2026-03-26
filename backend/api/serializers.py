@@ -34,7 +34,7 @@ class RoomListSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Room
-        fields = ['id', 'title', 'room_type', 'price_per_night', 'max_guests', 'primary_image', 'average_rating', 'rating_count']
+        fields = ['id', 'title', 'room_type', 'price_per_night', 'max_guests', 'location', 'primary_image', 'average_rating', 'rating_count']
     
     def get_primary_image(self, obj):
         """Get the first image of the room"""
@@ -57,7 +57,7 @@ class RoomDetailSerializer(serializers.ModelSerializer):
         model = Room
         fields = [
             'id', 'title', 'description', 'room_type', 'price_per_night', 'max_guests',
-            'amenities', 'images', 'average_rating', 'rating_count', 'available_from',
+            'location', 'amenities', 'images', 'average_rating', 'rating_count', 'available_from',
             'available_to', 'created_by_name', 'created_at', 'updated_at'
         ]
     
@@ -79,7 +79,7 @@ class RoomCreateUpdateSerializer(serializers.ModelSerializer):
         model = Room
         fields = [
             'title', 'description', 'room_type', 'price_per_night', 'max_guests',
-            'amenities', 'available_from', 'available_to', 'images'
+            'location', 'amenities', 'available_from', 'available_to', 'images'
         ]
     
     def create(self, validated_data):
